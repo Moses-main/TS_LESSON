@@ -2,9 +2,6 @@ function add(a: number, b: number) {
   return a + b;
 }
 
-let sum = add(1, 4);
-console.log(sum);
-
 // Named function
 function greet(name: string) {
   return "hello" + name;
@@ -23,5 +20,16 @@ let greet3 = (name: string) => {
 // shorthand arrow function
 let greet4 = (name: string) => "hello" + name;
 
-// function constructor
-const greet5 = new Function("name", 'return "hello" + name');
+// Rest Parameters
+
+function sum(numbers: number[]): number {
+  return numbers.reduce((total, n) => total + n, 0);
+}
+
+function times(f: (index: number) => void, n: number) {
+  for (let i = 0; i < n; i++) {
+    f(i);
+  }
+}
+
+console.log(sum([2, 2, 5, 2]));

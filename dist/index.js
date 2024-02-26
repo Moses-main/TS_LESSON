@@ -2,8 +2,6 @@
 function add(a, b) {
     return a + b;
 }
-let sum = add(1, 4);
-console.log(sum);
 // Named function
 function greet(name) {
     return "hello" + name;
@@ -18,6 +16,9 @@ let greet3 = (name) => {
 };
 // shorthand arrow function
 let greet4 = (name) => "hello" + name;
-// function constructor
-const greet5 = new Function("name", 'return "hello" + name');
+// Rest Parameters
+function sum(numbers) {
+    return numbers.reduce((total, n) => total + n, 0);
+}
+console.log(sum([2, 2, 5, 2]));
 //# sourceMappingURL=index.js.map
